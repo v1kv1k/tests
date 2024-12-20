@@ -71,13 +71,23 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
 .live-photo video {
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
+    pointer-events: none;
+}
+
+.live-photo:hover img {
+    opacity: 0;
+}
+
+.live-photo:hover video {
+    opacity: 1;
 }
 
 .hint {
